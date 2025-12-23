@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bewegungsstall Mißmaaßen, Stolpe</title>
+  <meta name="description" content="Bewegungsstall Mißmaaßen, Neu ab Sommer 2026 in Stolpe. Informationen zum Konzept und Vorteilen für das Pferd." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="assets/bewegungsstall_logo.png" />
+</head>
+<body class="page page-home">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <img
+        class="site-logo"
+        src="assets/bewegungsstall_logo.png"
+        alt="Bewegungsstall Mißmaaßen Logo"
+        width="220"
+        height="220"
+        loading="eager"
+      />
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <section class="container">
+      <div class="info-row" role="note" aria-label="Hinweis">
+        <span class="info-badge" aria-hidden="true">i</span>
+        <p class="info-text">Diese Seite befindet sich noch im Umbau.</p>
+      </div>
+
+      <h1 class="headline">
+        Neu ab <span class="accent">Sommer 2026</span> in Stolpe
+      </h1>
+
+      <div class="content-block">
+        <h2 class="section-title">Bewegungsstall Mißmaaßen</h2>
+
+        <ul class="bullet-list">
+          <li>Rund 2400 m² mit Paddockplatten befestigte Auslauffläche und über 3000 m² befestigter Trail.</li>
+          <li>Großzügige Ruheflächen in verschiedenen Bereichen</li>
+          <li>Wälzplatz</li>
+          <li>Eingewöhnungs- &amp; Krankenboxen mit Paddock</li>
+          <li>Transpondergesteuerte Heu- und Kraftfutterstationen für individuelle Fütterung</li>
+          <li>Großer separater Heubereich für ältere und schwerfuttrige Pferde</li>
+        </ul>
+
+        <hr class="divider" />
+
+        <h2 class="section-title">Vorteile für das Pferd</h2>
+
+        <ul class="bullet-list">
+          <li>Viele freie Bewegungsmöglichkeiten, Licht und frische Luft</li>
+          <li>Verschiedene räumlich getrennte Ruhemöglichkeiten</li>
+          <li>Herdenverband für Pflege der Sozialkontakte</li>
+          <li>Verbesserung der Kondition und Koordination durch die Bewegungsanreize</li>
+          <li>Erhaltung der Gesundheit, Stärkung des Immunsystems</li>
+          <li>Qualitativ hochwertiges Raufutter aus eigener Produktion</li>
+        </ul>
+
+        <div class="fazit">
+          <p class="fazit-label">FAZIT:</p>
+          <p class="fazit-text"><span class="accent">Gesunde, ausgeglichene, motivierte und glückliche Pferde</span></p>
+        </div>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="assets/pferde.jpg"
+          alt="Pferde laufen über eine verschneite Wiese"
+          loading="lazy"
+        />
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+      <p class="footer-contact">
+        Lina Noodt <strong>0173/5346403</strong>
+      </p>
+    </div>
+  </footer>
+
+  <div class="cookie" id="cookieBanner" aria-live="polite" aria-label="Cookie Hinweis" hidden>
+    <div class="cookie-inner">
+      <p class="cookie-title">Cookies</p>
+      <p class="cookie-text">
+        Diese Website nutzt technisch notwendige Cookies, um grundlegende Funktionen bereitzustellen.
+        Mehr Infos findest du in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </p>
+
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" id="cookieDecline" type="button">Ablehnen</button>
+        <button class="btn btn-primary" id="cookieAccept" type="button">Akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const KEY = "cookieConsent_bewegungsstall_missmaassen";
+      const banner = document.getElementById("cookieBanner");
+      const accept = document.getElementById("cookieAccept");
+      const decline = document.getElementById("cookieDecline");
+
+      function showBanner() {
+        banner.hidden = false;
+        document.documentElement.classList.add("has-cookie-banner");
+      }
+
+      function hideBanner() {
+        banner.hidden = true;
+        document.documentElement.classList.remove("has-cookie-banner");
+      }
+
+      function getConsent() {
+        try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      }
+
+      function setConsent(value) {
+        try { localStorage.setItem(KEY, value); } catch (e) {}
+      }
+
+      const consent = getConsent();
+      if (!consent) showBanner();
+
+      accept.addEventListener("click", function () {
+        setConsent("accepted");
+        hideBanner();
+      });
+
+      decline.addEventListener("click", function () {
+        setConsent("declined");
+        hideBanner();
+      });
+    })();
+  </script>
+</body>
+</html>

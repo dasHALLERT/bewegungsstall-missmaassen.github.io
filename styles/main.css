@@ -59,8 +59,9 @@ a:hover{ opacity: 0.9; }
   justify-content: center;
   align-items: center;
 }
+
 .site-logo{
-  width: 190px;
+  width: 180px;
   height: auto;
 }
 

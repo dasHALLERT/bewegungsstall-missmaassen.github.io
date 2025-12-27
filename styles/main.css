@@ -8,15 +8,23 @@
   --shadow: 0 10px 30px rgba(0,0,0,0.18);
 }
 
-*{ box-sizing: border-box; }
-html, body{ height: 100%; }
-body{
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+body{
   font-family: "Figtree", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--white);
   line-height: 1.55;
 }
+
 
 img{ max-width: 100%; height: auto; display: block; }
 
@@ -49,8 +57,10 @@ a:hover{ opacity: 0.9; }
 
 .site-header{
   width: 100%;
-  background: var(--bg);
-  padding: 22px 16px 10px 16px;
+  background: transparent;
+  padding: 0 16px; /* nur seitlich, kein oben */
+}
+
 }
 .header-inner{
   max-width: var(--max);
@@ -306,8 +316,17 @@ a:hover{ opacity: 0.9; }
   .footer-inner{ align-items: flex-start; }
   .footer-nav{ width: 100%; }
   .header-box{
-    border-radius: 0 0 22px 22px;
-    padding: 18px 12px 14px 12px; }
+  max-width: var(--max);
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 0 0 28px 28px;
+  padding: 22px 16px 18px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
   .site-logo{
     width: 150px; }
 }

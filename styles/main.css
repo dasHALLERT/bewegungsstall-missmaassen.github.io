@@ -23,6 +23,18 @@ img{ max-width: 100%; height: auto; display: block; }
 a{ color: inherit; }
 a:hover{ opacity: 0.9; }
 
+.header-box{
+  max-width: var(--max);
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 0 0 28px 28px;
+  padding: 22px 16px 18px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
 .skip-link{
   position: absolute;
   left: -999px;
